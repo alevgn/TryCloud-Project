@@ -1,11 +1,11 @@
-package com.project_name.step_definitions;
+package com.cloud.step_definitions;
 
 
 
 
-import com.project_name.utilities.BrowserUtils;
-import com.project_name.utilities.ConfigurationReader;
-import com.project_name.utilities.Driver;
+import com.cloud.utilities.BrowserUtils;
+import com.cloud.utilities.ConfigurationReader;
+import com.cloud.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;

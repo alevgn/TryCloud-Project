@@ -1,7 +1,7 @@
-package com.project_name.step_definitions;
+package com.cloud.step_definitions;
 
-import com.project_name.pages.LoginPage;
-import com.project_name.utilities.ConfigurationReader;
+import com.cloud.pages.LoginPage;
+import com.cloud.utilities.ConfigurationReader;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 
@@ -17,15 +17,12 @@ public class LoginStepDefs {
         String username =null;
         String password =null;
 
-        if(userType.equalsIgnoreCase("driver")){
-            username = ConfigurationReader.getProperty("driver_username");
-            password = ConfigurationReader.getProperty("driver_password");
-        }else if(userType.equalsIgnoreCase("sales manager")){
-            username = ConfigurationReader.getProperty("sales_manager_username");
-            password = ConfigurationReader.getProperty("sales_manager_password");
-        }else if(userType.equalsIgnoreCase("store manager")){
-            username = ConfigurationReader.getProperty("store_manager_username");
-            password = ConfigurationReader.getProperty("store_manager_password");
+        if(userType.equalsIgnoreCase("user")){
+            username = ConfigurationReader.getProperty("username");
+            password = ConfigurationReader.getProperty("password");
+        }else if(userType.equalsIgnoreCase("employee")){
+            username = ConfigurationReader.getProperty("employee_username");
+            password = ConfigurationReader.getProperty("employee_password");
         }
         //send username and password and login
         new LoginPage().login(username,password);

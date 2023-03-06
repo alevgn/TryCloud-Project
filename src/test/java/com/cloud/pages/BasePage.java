@@ -1,10 +1,8 @@
-package com.project_name.pages;
+package com.cloud.pages;
 
 
-
-
-import com.project_name.utilities.BrowserUtils;
-import com.project_name.utilities.Driver;
+import com.cloud.utilities.BrowserUtils;
+import com.cloud.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -18,6 +16,54 @@ import java.time.Duration;
 import java.util.List;
 
 public abstract class BasePage {
+
+    @FindBy(xpath = "//li[@data-id='files']")
+    public List<WebElement> filesOption;
+
+
+    @FindBy(xpath = "//li[@data-id='photos']")
+    public List<WebElement> photosOption;
+
+    @FindBy(xpath = "//li[@data-id='activity']")
+    public List<WebElement> activityOption;
+
+    @FindBy(xpath = "//a[@aria-label='Talk']")
+    public List<WebElement> talkOption;
+
+    @FindBy(xpath = "//a[@aria-label='Mail']")
+    public List<WebElement> mailOption;
+
+    @FindBy(xpath = "//a[@aria-label='Contacts']")
+    public List<WebElement> contactsOption;
+
+    @FindBy(xpath = "//a[@aria-label='Calendar']")
+    public List<WebElement> calendarOption;
+
+    @FindBy(xpath = "//a[@aria-label='Notes']")
+    public List<WebElement> notesOption;
+
+    @FindBy(xpath = "//a[@aria-label='Deck']")
+    public List<WebElement> deckOption;
+
+
+    @FindBy(xpath = "//a[@aria-label='Tasks']")
+    public List<WebElement> tasksOption;
+
+    @FindBy(xpath = "//div[@class='header-menu unified-search']")
+    public List<WebElement> searchMagnifier;
+
+    @FindBy(xpath = "//div[@class='notifications']")
+    public List<WebElement> notifications;
+
+    @FindBy(xpath = "//div[@id='contactsmenu']")
+    public List<WebElement> contacts;
+
+    @FindBy(xpath = "//div[@id='settings']")
+    public List<WebElement> settings;
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;
@@ -70,7 +116,6 @@ public abstract class BasePage {
     }
 
 
-
     /**
      * This method will navigate user to the specific module in vytrack application.
      * For example: if tab is equals to Activities, and module equals to Calls,
@@ -96,7 +141,7 @@ public abstract class BasePage {
             Driver.getDriver().findElement(By.xpath(moduleLocator)).click();
         } catch (Exception e) {
 //            BrowserUtils.waitForStaleElement(Driver.get().findElement(By.xpath(moduleLocator)));
-            BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)),  5);
+            BrowserUtils.clickWithTimeOut(Driver.getDriver().findElement(By.xpath(moduleLocator)), 5);
         }
     }
 

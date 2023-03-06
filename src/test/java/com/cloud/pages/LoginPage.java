@@ -1,26 +1,26 @@
-package com.project_name.pages;
+package com.cloud.pages;
 
 
-import com.fleet.utilities.Driver;
+import com.cloud.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 
-    public LoginPage(){
+    public LoginPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(id="prependedInput")
+    @FindBy(id = "user")
     public WebElement userName;
 
 
-
-    @FindBy(id="prependedInput2")
+    @FindBy(id = "password")
     public WebElement password;
 
-    @FindBy(name = "_submit")
+
+    @FindBy(xpath = "//input[@id='submit-form']")
     public WebElement submit;
 
 
