@@ -18,48 +18,48 @@ import java.util.List;
 public abstract class BasePage {
 
     @FindBy(xpath = "//li[@data-id='files']")
-    public List<WebElement> filesOption;
+    public WebElement filesOption;
 
 
     @FindBy(xpath = "//li[@data-id='photos']")
-    public List<WebElement> photosOption;
+    public WebElement photosOption;
 
     @FindBy(xpath = "//li[@data-id='activity']")
-    public List<WebElement> activityOption;
+    public WebElement activityOption;
 
     @FindBy(xpath = "//a[@aria-label='Talk']")
-    public List<WebElement> talkOption;
+    public WebElement talkOption;
 
     @FindBy(xpath = "//a[@aria-label='Mail']")
-    public List<WebElement> mailOption;
+    public WebElement mailOption;
 
     @FindBy(xpath = "//a[@aria-label='Contacts']")
-    public List<WebElement> contactsOption;
+    public WebElement contactsOption;
 
     @FindBy(xpath = "//a[@aria-label='Calendar']")
-    public List<WebElement> calendarOption;
+    public WebElement calendarOption;
 
     @FindBy(xpath = "//a[@aria-label='Notes']")
-    public List<WebElement> notesOption;
+    public WebElement notesOption;
 
     @FindBy(xpath = "//a[@aria-label='Deck']")
-    public List<WebElement> deckOption;
+    public WebElement deckOption;
 
 
     @FindBy(xpath = "//a[@aria-label='Tasks']")
-    public List<WebElement> tasksOption;
+    public WebElement tasksOption;
 
     @FindBy(xpath = "//div[@class='header-menu unified-search']")
-    public List<WebElement> searchMagnifier;
+    public WebElement searchMagnifier;
 
     @FindBy(xpath = "//div[@class='notifications']")
-    public List<WebElement> notifications;
+    public WebElement notifications;
 
     @FindBy(xpath = "//div[@id='contactsmenu']")
-    public List<WebElement> contacts;
+    public WebElement contacts;
 
     @FindBy(xpath = "//div[@id='settings']")
-    public List<WebElement> settings;
+    public WebElement settings;
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
