@@ -64,6 +64,7 @@ public abstract class BasePage {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    //Adam's Methods: Use if you need. Please do not delete for now.
 
     @FindBy(css = "span.title-level-1")
     public List<WebElement> menuOptions;

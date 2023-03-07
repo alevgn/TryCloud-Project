@@ -2,13 +2,14 @@ package com.cloud.step_definitions;
 
 import com.cloud.pages.LoginPage;
 import com.cloud.utilities.ConfigurationReader;
+import com.cloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 public class LoginStepDefs {
 
 
     @Given("the user is on the login page")
     public void the_user_is_on_the_login_page() {
-        System.out.println("Login to app in Before method");
+        Driver.getDriver().get("https://qa.ceallo.com/index.php/login");
     }
 
     @Given("the user logged in as {string}")
