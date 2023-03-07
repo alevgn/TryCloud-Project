@@ -12,7 +12,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 
-public class US92_StepDefs_OFG extends BasePage {
+public class B28G31_92_StepDefs_OFG extends BasePage {
 
     LoginPage loginPage = new LoginPage();
     FilesPage_OFG filesPage_ofg = new FilesPage_OFG();
