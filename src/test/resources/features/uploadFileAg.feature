@@ -1,5 +1,6 @@
- @alev
+@alev
 Feature: As a user, I should be able to upload a file.
+
   Background: User is already in the log in page
     Given the user is on the login page
     Given User is already logged into the Ceallo
