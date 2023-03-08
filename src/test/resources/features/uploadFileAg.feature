@@ -4,5 +4,5 @@ Feature: As a user, I should be able to upload a file.
     Given user on the dashboard page -AG
     When the user clicks the "Files" module
     When the user clicks the add icon on the top
-    And users uploads file with the “upload file” option
+    And  the user uploads a file from "files" with the upload file option
     Then verify the file is displayed on the page
