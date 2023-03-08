@@ -17,14 +17,14 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    @FindBy(xpath = "(//li[@data-id='files'])[1]")
+    @FindBy(xpath = "(//a[@aria-label='Files'])[1]")
     public WebElement filesOption;
 
 
-    @FindBy(xpath = "(//li[@data-id='photos'])[1]")
+    @FindBy(xpath = "(//a[@aria-label='Photos'])[1]")
     public WebElement photosOption;
 
-    @FindBy(xpath = "(//li[@data-id='activity'])[1]")
+    @FindBy(xpath = "(//a[@aria-label='Activity'])[1]")
     public WebElement activityOption;
 
     @FindBy(xpath = "(//a[@aria-label='Talk'])[1]")
@@ -46,7 +46,7 @@ public abstract class BasePage {
     public WebElement deckOption;
 
 
-    @FindBy(xpath = "/(//a[@aria-label='Tasks'])[1]")
+    @FindBy(xpath = "(//a[@aria-label='Tasks'])[1]")
     public WebElement tasksOption;
 
     @FindBy(xpath = "//span[@aria-label='Magnify icon']")
@@ -60,6 +60,30 @@ public abstract class BasePage {
 
     @FindBy(xpath = "//div[@aria-label='Settings']")
     public WebElement settings;
+
+
+
+
+    /**
+     * This method will navigate user to the specific module in Ceallo application.
+     * For example: if tab is equals to Photos
+     * Then method will navigate user to this page: https://qa.ceallo.com/index.php/apps/photos/
+     *
+     * @param tab
+     *
+     */
+    public static void navigateToTab(String tab) {
+        String tabLocator = "(//a[@aria-label='" + tab + "'])[1]";
+
+        try {
+            BrowserUtils.waitForClickablility(By.xpath(tabLocator), 5);
+            WebElement tabElement = Driver.getDriver().findElement(By.xpath(tabLocator));
+            new Actions(Driver.getDriver()).moveToElement(tabElement).pause(200).click().perform();
+        } catch (Exception e) {
+            BrowserUtils.clickWithWait(By.xpath(tabLocator), 5);
+        }
+
+    }
 
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////
