@@ -17,14 +17,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.io.File;
 
 public class UploadFile_StepDefinitionsAG extends BasePage {
-
-    @Given("user on the dashboard page -AG")
-    public void user_on_the_dashboard_page() {
-        Driver.getDriver().get("https://qa.ceallo.com/index.php/login");
-        LoginPage loginPage = new LoginPage();
-        loginPage.login("User1", "Userpass123");
-    }
-
+    
     @When("the user clicks the {string} module")
     public void the_user_clicks_the_module(String files) {
         filesOption.click();
