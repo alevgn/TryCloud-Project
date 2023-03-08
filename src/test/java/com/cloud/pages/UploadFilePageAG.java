@@ -10,14 +10,17 @@ import java.awt.print.Pageable;
 public class UploadFilePageAG {
 
     public UploadFilePageAG() {
-        PageFactory.initElements(Driver.getDriver(),this);
+        PageFactory.initElements(Driver.getDriver(), this);
     }
+
     @FindBy(xpath = "//a[@class='button new']")
     public WebElement plusButton;
 
-    @FindBy(xpath = "//label[@class='menuitem']")
-    public WebElement uploadFile;
+    @FindBy(xpath = "//input[@type='file']")
+    public WebElement hiddenUploadFile;
 
-    
-    
+    @FindBy(xpath = "//span[.='message (2)']")
+    public WebElement verifiedFileName;
+
+
 }

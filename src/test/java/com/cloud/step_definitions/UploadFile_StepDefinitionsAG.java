@@ -9,8 +9,10 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import java.io.File;
 
@@ -35,26 +37,23 @@ public class UploadFile_StepDefinitionsAG extends BasePage {
         uploadFilePageAG.plusButton.click();
     }
 
-    @And("the user uploads a file from {string} with the upload file option")
-    public void theUserUploadsAFileFromWithTheUploadFileOption(String path) {
+    @And("the user uploads a file from files with the upload file option")
+    public void theUserUploadsAFileFromWithTheUploadFileOption() {
 
-        File file = new File("src/test/resources/exampleFile.txt");
+        File file = new File("src/test/resources/message (2).txt");
 
-        path = file.getAbsolutePath();
 
-        WebElement uploadFileElement = Driver.getDriver().findElement(By.xpath("//input[@type='file']"));
-        uploadFileElement.sendKeys(path);
+        WebElement uploadFileElement = uploadFilePageAG.hiddenUploadFile;
+        uploadFileElement.sendKeys(file.getAbsolutePath());
 
-        // File file = new File("src/test/resources/exampleFile.txt");
-
-        //Driver.getDriver().findElement(By.xpath("//input[@type='file']")).sendKeys(file.getAbsolutePath());
-
-        //Driver.getDriver().findElement(By.xpath("//input[@type='file']")).sendKeys(file.getAbsolutePath());
 
     }
 
-    @Then("verify the file is displayed on the page")
+    @Then("verify the file name is displayed on the page")
     public void verify_the_file_is_displayed_on_the_page() {
+
+        Assert.assertTrue(uploadFilePageAG.verifiedFileName.isDisplayed());
+
 
     }
 
