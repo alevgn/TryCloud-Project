@@ -17,48 +17,48 @@ import java.util.List;
 
 public abstract class BasePage {
 
-    @FindBy(xpath = "//li[@data-id='files']")
+    @FindBy(xpath = "(//li[@data-id='files'])[1]")
     public WebElement filesOption;
 
 
-    @FindBy(xpath = "//li[@data-id='photos']")
+    @FindBy(xpath = "(//li[@data-id='photos'])[1]")
     public WebElement photosOption;
 
-    @FindBy(xpath = "//li[@data-id='activity']")
+    @FindBy(xpath = "(//li[@data-id='activity'])[1]")
     public WebElement activityOption;
 
-    @FindBy(xpath = "//a[@aria-label='Talk']")
+    @FindBy(xpath = "(//a[@aria-label='Talk'])[1]")
     public WebElement talkOption;
 
-    @FindBy(xpath = "//a[@aria-label='Mail']")
+    @FindBy(xpath = "(//a[@aria-label='Mail'])[1]")
     public WebElement mailOption;
 
-    @FindBy(xpath = "//a[@aria-label='Contacts']")
+    @FindBy(xpath = "(//a[@aria-label='Contacts'])[1]")
     public WebElement contactsOption;
 
-    @FindBy(xpath = "//a[@aria-label='Calendar']")
+    @FindBy(xpath = "(//a[@aria-label='Calendar'])[1]")
     public WebElement calendarOption;
 
-    @FindBy(xpath = "//a[@aria-label='Notes']")
+    @FindBy(xpath = "(//a[@aria-label='Notes'])[1]")
     public WebElement notesOption;
 
-    @FindBy(xpath = "//a[@aria-label='Deck']")
+    @FindBy(xpath = "(//a[@aria-label='Deck'])[1]")
     public WebElement deckOption;
 
 
-    @FindBy(xpath = "//a[@aria-label='Tasks']")
+    @FindBy(xpath = "/(//a[@aria-label='Tasks'])[1]")
     public WebElement tasksOption;
 
-    @FindBy(xpath = "//div[@class='header-menu unified-search']")
+    @FindBy(xpath = "//span[@aria-label='Magnify icon']")
     public WebElement searchMagnifier;
 
-    @FindBy(xpath = "//div[@class='notifications']")
+    @FindBy(xpath = "//div[@aria-label='Notifications']")
     public WebElement notifications;
 
-    @FindBy(xpath = "//div[@id='contactsmenu']")
+    @FindBy(xpath = "//div[@aria-label='Contacts menu']")
     public WebElement contacts;
 
-    @FindBy(xpath = "//div[@id='settings']")
+    @FindBy(xpath = "//div[@aria-label='Settings']")
     public WebElement settings;
 
 

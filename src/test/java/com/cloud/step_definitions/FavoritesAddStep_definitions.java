@@ -4,7 +4,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class FavoritesStep_definitions {
+public class FavoritesAddStep_definitions {
 
 
     @Given("user on the dashboard page")
