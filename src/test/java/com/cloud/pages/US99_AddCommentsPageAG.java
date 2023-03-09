@@ -31,7 +31,7 @@ public class US99_AddCommentsPageAG {
     @FindBy(xpath = "//input[@class='submit icon-confirm has-tooltip']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//div[@id='commentsTabView']//li")
+    @FindBy(xpath = "//div[@id='commentsTabView']//li//div[@class='message']")
     public List<WebElement> comments;
 
     

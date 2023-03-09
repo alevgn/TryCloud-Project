@@ -32,10 +32,10 @@ public class US99_AddComments_StepDefinitionsAG extends BasePage{
         us99_addCommentsPageAG.detailOption.click();
 
     }
-    @When("user write a comment inside the input box")
-    public void user_write_a_comment_inside_the_input_box() {
+    @When("user write a comment as {string} inside the input box")
+    public void user_write_a_comment_inside_the_input_box(String message) {
         us99_addCommentsPageAG.commentTab.click();
-        us99_addCommentsPageAG.inputBox.sendKeys("Second Comment");
+        us99_addCommentsPageAG.inputBox.sendKeys(message);
     }
     @When("user click the submit button to post it")
     public void user_click_the_submit_button_to_post_it() {
@@ -45,12 +45,9 @@ public class US99_AddComments_StepDefinitionsAG extends BasePage{
     @Then("Verify the {string} is displayed in the comment section.")
     public void verifyTheIsDisplayedInTheCommentSection(String comment) {
 
+        BrowserUtils.sleep(3);
         List<String> actualComments= BrowserUtils.getElementsText(us99_addCommentsPageAG.comments);
-        for (String eachComment : actualComments) {
-            System.out.println("eachComment = " + eachComment);
-            Assert.assertTrue(eachComment.contains(comment));
-        }
-
+       Assert.assertTrue(actualComments.contains(comment));
 
      
     }
