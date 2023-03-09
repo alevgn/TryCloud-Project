@@ -17,8 +17,10 @@ public class US99_AddComments_StepDefinitionsAG extends BasePage{
     @Given("user on the home page")
     public void user_on_the_home_page() {
         BrowserUtils. verifyTitle("Files - Ceallo - QA");
-        filesOption.click();
+
     }
+
+
     @When("user click action-icon from any file on the page")
     public void user_click_action_icon_from_any_file_on_the_page() {
       us99_addCommentsPageAG.actionIcon.click();
@@ -51,4 +53,6 @@ public class US99_AddComments_StepDefinitionsAG extends BasePage{
 
      
     }
+
+
 }
