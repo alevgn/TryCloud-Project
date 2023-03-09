@@ -39,7 +39,6 @@ public class UploadFile_StepDefinitionsAG extends BasePage {
         WebElement uploadFileElement = uploadFilePageAG.hiddenUploadFile;
         uploadFileElement.sendKeys(file.getAbsolutePath());
 
-
     }
 
     @Then("verify the file name is displayed on the page")
