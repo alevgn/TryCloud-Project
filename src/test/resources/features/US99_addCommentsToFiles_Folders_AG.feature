@@ -13,4 +13,4 @@ Feature: As a user, I should be able to write comments to files/folders.
     And user choose the Details option
     And user write a comment inside the input box
     And user click the submit button to post it
-    Then Verify the comment is displayed in the comment section.
+    Then Verify the "Second Comment" is displayed in the comment section.
