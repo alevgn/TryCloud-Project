@@ -25,8 +25,8 @@ public class LoginPage {
 
 
     public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys(userNameStr);
-        password.sendKeys(passwordStr);
+        userName.sendKeys("User1");
+        password.sendKeys("Userpass123");
         submit.click();
         // verification that we logged
     }
