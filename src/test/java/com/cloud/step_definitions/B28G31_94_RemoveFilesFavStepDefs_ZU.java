@@ -45,3 +45,4 @@ RemoveFilesFavPage_ZU removeFilesFavPage_zu = new RemoveFilesFavPage_ZU();
     BrowserUtils.verifyElementNotDisplayed((By.xpath("//a[@class='name']")));
     }
 }
+//ZU

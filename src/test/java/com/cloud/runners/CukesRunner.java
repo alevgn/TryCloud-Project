@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         glue = "com/cloud/step_definitions",
         dryRun = false,
         tags = "",
-        publish = true  //generating a report with public link
+        publish = true //generating a report with public link
 )
 public class CukesRunner {}
 
