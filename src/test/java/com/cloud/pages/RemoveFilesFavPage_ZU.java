@@ -11,16 +11,16 @@ public class RemoveFilesFavPage_ZU {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//a[@data-action='menu']")
+    @FindBy(xpath="//a[@data-action='menu']")
     public WebElement actionIcon;
 
-    @FindBy(xpath = "//a[@data-action='Favorite']")
+    @FindBy(xpath="//a[@data-action='Favorite']")
     public WebElement removeFromFavoritesOption;
 
-    @FindBy(xpath = "//a[.='Favorites']")
+    @FindBy(xpath="//a[.='Favorites']")
     public WebElement FavoritesSubModule;
 
-    @FindBy(xpath = "//a[@class='name']")
+    @FindBy(xpath="//a[@class='name']")
     public WebElement verifiedInvisibleElement;
 
 }
