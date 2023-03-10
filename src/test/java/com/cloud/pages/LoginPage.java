@@ -28,7 +28,7 @@ public class LoginPage {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         submit.click();
-        // verification that we logged
+          // verification that we logged
     }
 
 }
