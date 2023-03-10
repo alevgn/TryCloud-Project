@@ -11,6 +11,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class B28G31_91_StepDefs_Alp {
@@ -27,20 +28,17 @@ public class B28G31_91_StepDefs_Alp {
     @Then("Verify the user see the following modules:")
     public void verify_the_user_see_the_following_modules(List<String> expectedList) {
 
-        List<String> newArray = new ArrayList<>();
+        List<String> ExpectedList = new ArrayList<>(Arrays.asList("Files, Photos, Activity, Talk, Mail, Contacts, Calendar, Notes, Deck, Tasks, "));
+       // System.out.println(ExpectedList);
 
+        List<String> ActualList = new ArrayList<>();
         List<WebElement> list = Driver.getDriver().findElements(By.xpath("//ul[@id='appmenu']//li//a"));
-
-
         for (WebElement each : list) {
-            newArray.add(each.getAccessibleName());
-
+            ActualList.add(each.getAccessibleName());
         }
-        String actuallist = newArray.toString().trim();
-       // System.out.println(actuallist);
-        String expectedlist = "Files, Photos, Activity, Talk, Mail, Contacts, Calendar, Notes, Deck, Tasks,  ";
-        //  System.out.println(expectedlist);
-        Assert.assertTrue(actuallist.contains(expectedlist));
+
+        Assert.assertTrue(ActualList.toString().contains(ExpectedList.toString()));
+
     }
 
 
