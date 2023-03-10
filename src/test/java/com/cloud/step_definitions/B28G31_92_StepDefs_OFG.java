@@ -19,7 +19,7 @@ public class B28G31_92_StepDefs_OFG extends BasePage {
 
     @Given("User is already logged into the Ceallo")
     public void user_is_already_logged_into_the_ceallo() {
-        LoginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
+        loginPage.login(ConfigurationReader.getProperty("username"), ConfigurationReader.getProperty("password"));
     }
 
     @Given("user on the dashboard page")

@@ -13,18 +13,18 @@ public class LoginPage {
     }
 
     @FindBy(id = "user")
-    public static WebElement userName;
+    public WebElement userName;
 
 
     @FindBy(id = "password")
-    public static WebElement password;
+    public WebElement password;
 
 
     @FindBy(xpath = "//input[@id='submit-form']")
-    public static WebElement submit;
+    public WebElement submit;
 
 
-    public static void login(String userNameStr, String passwordStr) {
+    public void login(String userNameStr, String passwordStr) {
         userName.sendKeys(userNameStr);
         password.sendKeys(passwordStr);
         submit.click();
