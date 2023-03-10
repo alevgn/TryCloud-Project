@@ -31,7 +31,7 @@ public class B28G31_98_StepDefs_SM extends BasePage {
     }
     @Then("Verify the deleted file is displayed on the Deleted Files page.")
     public void verify_the_deleted_file_is_displayed_on_the_deleted_files_page() {
-        BrowserUtils.sleep(2);
+        BrowserUtils.sleep(4);
         //System.out.println("deletedFileWebE_UnderDeletedFiles.isDisplayed() = " + deletedFileWebE_UnderDeletedFiles.isDisplayed());
         Assert.assertTrue(deletedFileWebE_UnderDeletedFiles.isDisplayed());
         //clicking the restore button and restoring the file so this test can be performed automatically again
