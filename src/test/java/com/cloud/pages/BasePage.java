@@ -61,6 +61,11 @@ public abstract class BasePage {
     @FindBy(xpath = "//div[@aria-label='Settings']")
     public WebElement settings;
 
+    @FindBy(xpath = "//div[@class='logo logo-icon']")
+    public WebElement logoIcon;
+
+
+
 
 
 
