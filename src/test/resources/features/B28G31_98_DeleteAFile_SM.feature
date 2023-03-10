@@ -1,7 +1,7 @@
 Feature: As a user, I should be able to delete a file/folder.
 
   Background: User is already in the log in page
-    Given the user is on the login page
+    Given the user is on the login page conf file used
     Given User is already logged into the Ceallo
 
   Scenario: Verify users delete a file/folder

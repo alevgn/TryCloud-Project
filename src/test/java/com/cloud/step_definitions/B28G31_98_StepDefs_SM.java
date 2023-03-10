@@ -2,6 +2,8 @@ package com.cloud.step_definitions;
 
 import com.cloud.pages.BasePage;
 import com.cloud.utilities.BrowserUtils;
+import com.cloud.utilities.ConfigurationReader;
+import com.cloud.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -36,5 +38,9 @@ public class B28G31_98_StepDefs_SM extends BasePage {
         restoreButtonFromDeletedFilesModuleS.click();
     }
 
+    @Given("the user is on the login page conf file used")
+    public void theUserIsOnTheLoginPageConfFileUsed() {
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
+    }
 }
 
