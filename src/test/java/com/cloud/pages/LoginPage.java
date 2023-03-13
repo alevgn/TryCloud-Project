@@ -1,6 +1,7 @@
 package com.cloud.pages;
 
 
+import com.cloud.utilities.BrowserUtils;
 import com.cloud.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -25,10 +26,11 @@ public class LoginPage {
 
 
     public void login(String userNameStr, String passwordStr) {
-        userName.sendKeys("User1");
-        password.sendKeys("Userpass123");
-        submit.click();
-          //verification that we logged
+
+        userName.sendKeys(userNameStr);
+        password.sendKeys(passwordStr);
+        BrowserUtils.sleep(3);
+
     }
 
 }
