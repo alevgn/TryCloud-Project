@@ -12,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.xml.xpath.XPath;
 import java.time.Duration;
 import java.util.List;
 
@@ -64,7 +65,26 @@ public abstract class BasePage {
     @FindBy(xpath = "//div[@class='logo logo-icon']")
     public WebElement logoIcon;
 
+    //This locates the action icon button for the file created purposely for this test
+    @FindBy(xpath ="//tr[@data-file='SM_Delete_Test.txt']//a[@data-action='menu']")
+    public WebElement actionIconSM_Delete_TEst_file;
 
+    //Locates the Delete File from the dropdown menu
+    @FindBy(xpath = "//a[@data-action='Delete']")
+    public WebElement deleteFileButtonFromDropDownMenu;
+
+    //Locator for Deleted files button from submodule on bottom left corner
+    @FindBy(xpath = "//a[@class='nav-icon-trashbin svg']")
+    public WebElement deletedFilesButtonFromSubModule;
+
+    //Locator for specific file made for this test with name SM_Delete_Test
+    //This will locate the file ones is under Deleted files
+    @FindBy(xpath = "//tr[@data-path='SM_Delete_Test.txt']")
+    public WebElement deletedFileWebE_UnderDeletedFiles;
+
+    //Locator for the restore button
+    @FindBy(xpath = "//tr[@data-path='SM_Delete_Test.txt']//a[@data-action='Restore']")
+    public WebElement restoreButtonFromDeletedFilesModuleS;
 
 
 
