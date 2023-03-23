@@ -5,6 +5,7 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
+
 @CucumberOptions(
         plugin = {
                 "html:target/cucumber-reports.html",
@@ -19,5 +20,3 @@ import org.junit.runner.RunWith;
         publish = true //generating a report with public link
 )
 public class CukesRunner {}
-
-
