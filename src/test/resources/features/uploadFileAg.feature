@@ -1,4 +1,4 @@
-@alev
+
 Feature: As a user, I should be able to upload a file.
 
   Background: User is already in the log in page
